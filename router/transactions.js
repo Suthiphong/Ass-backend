@@ -9,7 +9,7 @@ router.use(express.json())
 router.get('/', async (req,res)=> {
     let {users} = req.query
     const result = await Transactions.find({
-        user: '5e5d07c84a418f9a85cec8ea',
+        user: users,
     })
     if(result.length == 0){
         res.json({
